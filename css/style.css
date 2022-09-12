@@ -29,6 +29,7 @@ html{
     --lightgreen: #d1e9cd;
     --brownred: #61082b;
     --lightgrey: #f5f5f5;
+    --grey: #bbb9b9;
     --red: #d5001f;
     --lightred: #ff1c1c;
     --azure: #0093ce;
@@ -43,6 +44,9 @@ html{
 .container{
     max-width: var(--page-max-width-med);
 }
+.smallContainer{
+    max-width: var(--page-max-width-small);
+}
 .flex{
     display: flex;
 }
@@ -51,12 +55,18 @@ html{
 }
 .h-screen {
     min-height: calc(100vh - 45px);
-  }
-  .widht30{
+}
+.widht30{
     width: 30%;
 }
 .widht70{
     width: 70%;
+}
+.height80{   
+    max-height: 80%;
+}
+.marginAuto{
+    margin: 0 auto;
 }
 /* Button and Hover */
 .btn{
@@ -106,9 +116,12 @@ h1{
     font-size: 90px;
 }
 #hero{
-    width: 100%;
-    background-color: var(--bg-color);    
+    width: 100%;    
     position: relative;
+}
+.bgHero{
+    background-color: var(--bg-color);
+    height: 80vh;
 }
 .innerHero{    
     max-width: var(--page-max-width-med);    
@@ -131,11 +144,141 @@ h1{
 }
 .widht30 i{
     font-size: 50px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* MAIN SECTION */
 
+#businessPlans {
+    font-size: 40px;
+    padding-bottom: 25px;
+}
 
+.smallContainer h2 {
+margin-bottom: 60px;
+font-size: 42px;
+}
+
+.divRadio {
+    height: 50px;
+    padding-right: 30px;
+}
+
+.divRadio p {
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.radioContainer {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.radioContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    border: 2px solid var(--grey);
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.radioContainer:hover input~.checkmark {
+    background-color: var(--lightgrey);
+}
+
+.radioContainer input:checked~.checkmark {
+    background-color: var(--btn-color);
+    
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radioContainer input:checked~.checkmark:after {
+    display: block;
+}
+
+.radioContainer .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* CARD */
+.businessCard{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: calc((100% - 15px) / 3);
+    border: 1px solid var(--grey);
+    flex-direction: column;
+    align-items: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+}
+.card h3{
+    font-size: 28px;
+    padding: 25px 0; 
+}
+.card h4{
+    text-align: center;
+    padding: 20px 0;
+}
+.card h5{
+    font-size: 14px;
+    padding-top: 50px;
+}
+.card h6{
+    padding: 8px 0;
+    font-weight: 600;    
+    font-size: 14px;
+}
+.card p{    
+    display: flex;
+    padding: 12px 0;
+    font-size: 14px;
+}
+.card i{
+    padding-right: 5px;
+}
+.card span{
+    display: block;
+}
+.card .btn{
+    margin: 30px;
+    align-items: center;
+    display: block;
+}
+.card hr{
+    border: var(--grey) solid 1px;
+}
+.card hr:nth-child(3){
+    margin-top: 15px;
+    width: 50px;
+}
+.card .fa-check{
+    color: blue;
+}
 
 
