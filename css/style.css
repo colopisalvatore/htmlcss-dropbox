@@ -7,3 +7,135 @@ box-sizing: border-box;
 border: 1px solid black;
 min-height: 100px;
 }
+html{
+    font-family: "Whitney","Helvetica Neue","Helvetica","Arial",sans-serif;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+
+/* Selettori e Colori */
+:root{
+    --page-max-widht: 100%;
+    --page-max-width-med: 1260px;
+    --page-max-width-small: 1024px;
+
+    --bg-color: #b4d0e7;
+    --btn-color: #0061ff;
+    --footer-color: #000000;
+    --text-color: #000000;
+    --alternative-text-color: #78394d;
+    --green: #a2d39b;
+    --lightgreen: #d1e9cd;
+    --brownred: #61082b;
+    --lightgrey: #f5f5f5;
+    --red: #d5001f;
+    --lightred: #ff1c1c;
+    --azure: #0093ce;
+    --lightazure: #b4d0e7;
+    --blue: #0d2481;
+    --yellow: #ffd830;
+    --white: #fff;
+}
+.widht100{
+    max-width: var(--page-max-widht);
+}
+.container{
+    max-width: var(--page-max-width-med);
+}
+.flex{
+    display: flex;
+}
+.flexRow{
+    flex-direction: row;    
+}
+.h-screen {
+    min-height: calc(100vh - 45px);
+  }
+  .widht30{
+    width: 30%;
+}
+.widht70{
+    width: 70%;
+}
+/* Button and Hover */
+.btn{
+    font-size: 14px;
+    padding: 10px 16px;
+    text-decoration: none;
+    background-color: var(--btn-color);
+    color: var(--white)
+}
+.btnStart{    
+    padding: 7px 16px;        
+}
+
+/* Barra di Navigazione widht 100% */
+
+.navContainer{
+    height: 45px;    
+    align-items: center;
+}
+.menuSx{
+    margin-right: auto;
+}
+.menuDx{
+    margin-left: auto;
+    margin-right: 20px;
+}
+.menuSx li, .menuDx li{
+    padding: 0 15px;    
+    list-style: none;
+}
+.navContainer a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+#logo{
+    height: 20px;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+
+
+/* HERO SECTION */
+
+h1{
+    font-size: 90px;
+}
+#hero{
+    width: 100%;
+    background-color: var(--bg-color);    
+    position: relative;
+}
+.innerHero{    
+    max-width: var(--page-max-width-med);    
+    margin: 0 auto;
+    padding-top: 80px;    
+}
+.flex-hero{
+    display: flex;
+    padding: 50px 0;
+}
+.widht70 img{
+    width: 100%;
+}
+.widht30 p:first-child{
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+#heroText{
+    padding: 50px 0;
+}
+.widht30 i{
+    font-size: 50px;
+    margin-top: 40px;
+}
+
+/* MAIN SECTION */
+
+
+
+
