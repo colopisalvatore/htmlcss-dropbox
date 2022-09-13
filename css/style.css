@@ -275,7 +275,7 @@ font-size: 42px;
     font-size: 14px;
     text-indent: -0.6em;
 }
-.card li:nth-child(1){
+.card li:nth-child(2){
     text-indent: -0.8em;    
     padding: 12px 15px;
 }
