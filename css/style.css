@@ -85,11 +85,18 @@ html{
 .btnStart{    
     padding: 7px 16px;        
 }
+.enterBtn{
+    position: absolute;
+    right: 10px;
+    margin: 0 20px;
+    margin-top: 30px;
+}
 .btnPartner{
     background-color: transparent;
     color: var(--text-color);
     border: 1px solid var(--text-color);
 }
+
 
 /* Barra di Navigazione widht 100% */
 
@@ -241,7 +248,7 @@ font-size: 42px;
     border: 1px solid var(--grey);
     padding: 0 20px;
     font-size: 16px;
-    height: 54rem;
+    height: 60rem;
     flex-direction: column;
     align-items: left;
 }
@@ -299,12 +306,6 @@ font-size: 42px;
 .enterTitle{
     text-align: center;
     padding: 20px 0;
-}
-.enterBtn{
-    position: absolute;
-    right: 10px;
-    margin: 0 20px;
-    margin-top: 30px;
 }
 .enterText{
     margin: 0px 20px;
@@ -365,8 +366,9 @@ font-size: 42px;
 }
 .parent {
     display: grid;
-    grid-template-columns: 300px 300px auto 300px 300px;
-    grid-template-rows: 300px 300px auto 300px 300px;
+    grid-template-columns: repeat(2, 300px) auto repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
+
 }
 .parent div{
     position: relative;
@@ -392,6 +394,21 @@ font-size: 42px;
     left: 0;
     right: 0;
     bottom: 0;
+}
+.wiproContainer{
+    margin: 40px;
+}
+.wiproContainer img{
+    width: 45%;
+}
+.wiproContainer hr{
+    width: 150px;
+    margin-top: 30px;
+}
+.wiproContainer p{
+    margin: 40px 0;
+    font-size: 18px;
+    line-height: 22px;
 }
 #designit{
     background-color: var(--green);    
@@ -423,18 +440,29 @@ font-size: 42px;
 #wipro{
     background-color: var(--lightgrey);
 }
-.wiproContainer{
-    margin: 40px;
+
+.bgBanner{
+    background-color: var(--bg-color);
 }
-.wiproContainer img{
-    width: 45%;
+.banner{    
+    margin: 100px auto;
 }
-.wiproContainer hr{
-    width: 150px;
-    margin-top: 40px;
+#banner{
+    position: relative;
+    color: var(--alternative-text-color);
 }
-.wiproContainer p{
-    margin: 50px 0;
-    font-size: 18px;
-    line-height: 22px;
+#banner h2{
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.btnProva{
+    background-color: var(--lightgrey);
+    color: var(--text-color);
+    display: block;
+    padding: 12px 30px;
+    top: 15px;
+    right: 0;
+    position: absolute;
 }
