@@ -19,6 +19,7 @@ html{
     --page-max-widht: 100%;
     --page-max-width-med: 1260px;
     --page-max-width-small: 1024px;
+    --section-spacing: 150px;
 
     --bg-color: #b4d0e7;
     --btn-color: #0061ff;
@@ -54,7 +55,8 @@ html{
     flex-direction: row;    
 }
 .h-screen {
-    min-height: calc(100vh - 45px);
+    /* min-height: calc(100vh - 45px); */
+    background-color: var(--bg-color);
 }
 .widht30{
     width: 30%;
@@ -68,6 +70,9 @@ html{
 .marginAuto{
     margin: 0 auto;
 }
+.sectionSpacing{
+    margin-top: var(--section-spacing);
+}
 /* Button and Hover */
 .btn{
     font-size: 14px;
@@ -79,6 +84,11 @@ html{
 }
 .btnStart{    
     padding: 7px 16px;        
+}
+.btnPartner{
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
 }
 
 /* Barra di Navigazione widht 100% */
@@ -119,15 +129,11 @@ h1{
 #hero{
     width: 100%;    
     position: relative;
-}
-.bgHero{
-    background-color: var(--bg-color);
-    height: 80vh;
+    bottom: -130px;
 }
 .innerHero{    
     max-width: var(--page-max-width-med);    
-    margin: 0 auto;
-    padding-top: 80px;    
+    margin: 0 auto;  
 }
 .flex-hero{
     display: flex;
@@ -233,14 +239,12 @@ font-size: 42px;
     width: calc((100% - 15px) / 3);
     margin: 0 20px;
     border: 1px solid var(--grey);
-    /* flex-direction: column; */
-    /* align-items: left; */
     padding: 0 20px;
     font-size: 16px;
-    height: 52rem;
+    height: 54rem;
     flex-direction: column;
     align-items: left;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 }
 .card h3{
     font-size: 28px;
@@ -261,18 +265,19 @@ font-size: 42px;
 }
 .card li{
     list-style: none;
-    padding: 12px 0;
+    padding: 12px 15px;
     font-size: 14px;
+    text-indent: -0.6em;
+}
+.card li:nth-child(1){
+    text-indent: -0.8em;    
+    padding: 12px 15px;
 }
 .card i{
     padding-right: 5px;
 }
-.card span{
-    display: block;
-}
 .card .btn{
     margin: 30px;
-    align-items: center;
     display: block;
 }
 .card hr{
@@ -297,8 +302,6 @@ font-size: 42px;
     padding: 20px 0;
 }
 .enterBtn{
-    /* display: flex;
-    justify-content: space-between; */
     position: absolute;
     right: 10px;
     margin: 0 20px;
@@ -314,4 +317,23 @@ font-size: 42px;
 .enterText p{
     padding-top: 50px;
     padding-bottom: 30px;
+}
+
+/* PARTNER SECTION */
+
+.partnerContainer{
+    width: 25%;    
+    margin: 50px;  
+}
+.partnerText p{
+    padding-top: 20px;
+    margin-bottom: 40px;
+    line-height: 20px;
+}
+.partnerImg{
+    width: 60%;
+}
+
+.partnerText .btn{
+    
 }
