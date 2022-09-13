@@ -285,6 +285,7 @@ font-size: 42px;
 .card .btn{
     margin: 30px;
     display: block;
+    top: 0;
 }
 .card hr{
     border: var(--grey) solid 1px;
@@ -295,6 +296,10 @@ font-size: 42px;
 }
 .card .fa-check{
     color: blue;
+}
+.plan{
+    height: 22rem;
+    margin-bottom: 10px;
 }
 
 /* ENTERPRISE SECTION */
