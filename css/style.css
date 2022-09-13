@@ -73,8 +73,9 @@ html{
     font-size: 14px;
     padding: 10px 16px;
     text-decoration: none;
+    text-align: center;
     background-color: var(--btn-color);
-    color: var(--white)
+    color: var(--white);
 }
 .btnStart{    
     padding: 7px 16px;        
@@ -230,12 +231,16 @@ font-size: 42px;
 }
 .card{
     width: calc((100% - 15px) / 3);
+    margin: 0 20px;
     border: 1px solid var(--grey);
+    /* flex-direction: column; */
+    /* align-items: left; */
+    padding: 0 20px;
+    font-size: 16px;
+    height: 52rem;
     flex-direction: column;
     align-items: left;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 16px;
+    justify-content: flex-start;
 }
 .card h3{
     font-size: 28px;
@@ -254,8 +259,8 @@ font-size: 42px;
     font-weight: 600;    
     font-size: 14px;
 }
-.card p{    
-    display: flex;
+.card li{
+    list-style: none;
     padding: 12px 0;
     font-size: 14px;
 }
@@ -273,7 +278,7 @@ font-size: 42px;
 .card hr{
     border: var(--grey) solid 1px;
 }
-.card hr:nth-child(3){
+.card hr:nth-child(4){
     margin-top: 15px;
     width: 50px;
 }
@@ -281,4 +286,32 @@ font-size: 42px;
     color: blue;
 }
 
-
+/* ENTERPRISE SECTION */
+.enterprise{
+    margin-top: 60px;
+    border: var(--grey) 1px solid;
+    position: relative;
+}
+.enterTitle{
+    text-align: center;
+    padding: 20px 0;
+}
+.enterBtn{
+    /* display: flex;
+    justify-content: space-between; */
+    position: absolute;
+    right: 10px;
+    margin: 0 20px;
+    margin-top: 30px;
+}
+.enterText{
+    margin: 0px 20px;
+    margin-top: 30px;
+}
+.enterText h5{
+    padding-top: 15px;
+}
+.enterText p{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
