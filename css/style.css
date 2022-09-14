@@ -23,6 +23,7 @@ html{
 
     --bg-color: #b4d0e7;
     --btn-color: #0061ff;
+    --btn-hover: #297afe;
     --footer-color: #000000;
     --text-color: #000000;
     --alternative-text-color: #78394d;
@@ -83,6 +84,11 @@ html{
     background-color: var(--btn-color);
     color: var(--white);
 }
+.btn:hover{
+    background-color: var(--btn-hover);    
+    will-change: background-color;
+    transition: background-color 0.25s ease-out;
+}
 .btnStart{    
     padding: 7px 16px;        
 }
@@ -102,6 +108,9 @@ html{
     color: var(--text-color);
     display: block;
     padding: 12px 30px;
+}
+.btnProva:Hover, .btnPartner:Hover{
+    background-color: var(--grey);
 }
 
 
@@ -127,7 +136,7 @@ html{
     padding: 0 15px;    
     list-style: none;
 }
-#menu li a{
+.navContainer li a{
     text-decoration: none;
     color: var(--text-color);
     font-size: 15px;
@@ -218,7 +227,7 @@ h1{
 }
 .radioContainer input:checked~.checkmark {
     background-color: var(--btn-color);
-    
+
 }
 .checkmark:after {
     content: "";
@@ -387,8 +396,7 @@ h1{
 }
 .parent div{
     position: relative;
-}
-    
+}    
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 1 / 2 / 2 / 3; }
     .div3 { grid-area: 1 / 4 / 2 / 5; }
@@ -442,7 +450,12 @@ h1{
 /* DOMANDE FREQUENTI */
 .faqContainer{
     position: relative;
-    margin: 10px 0;
+    padding: 10px 0;
+}
+.faqContainer:hover{
+    background-color: var(--lightgrey);
+    will-change: background-color;
+    transition: background-color 0.25s ease-out;
 }
 input[type="checkbox"] {
     position: absolute;
@@ -454,7 +467,6 @@ input[type="checkbox"] {
 }
 .faqContainer h4 {
     font-weight: 600;
-    margin: 20px 0 0;
 }
 .faqContainer label {
     cursor: pointer;
@@ -552,7 +564,7 @@ ul#menu li{
 ul#menu li a{   
     font-size: 15px;
     float: left;
-    padding:12px 30px;
+    /* padding:12px 30px; */
     color: var(--text-color);
     text-decoration:none;
 
@@ -562,7 +574,7 @@ ul#menu li:hover{
     color: var(--text-color);
 }
 ul#menu li a:hover{
-    background: var(--darkbeige);
+    /* background: var(--darkbeige); */
     color: var(--text-color);
 }
 ul#menu ul{
@@ -574,13 +586,13 @@ ul#menu ul{
     visibility: hidden;
     position: absolute;
     width: 172px;
-    top: 38px;
+    top: 31px;
     left: 0;
     z-index:9999;
-    background: var(--beige);
+    /* background: var(--beige); */
 }
 ul#menu li:hover ul{
-    background: var(--darkbeige);
+    background: var(--white);
     opacity: 1;
     visibility: visible;
 }
@@ -596,6 +608,27 @@ ul#menu ul a{
     text-transform: none;
 }
 ul#menu ul a:hover{
-    background-color: var(--beige);
+    /* background-color: var(--beige); */
     color: var(--text-color);
 }
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+ }    
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+/* fatturazione mensile/annuale */
