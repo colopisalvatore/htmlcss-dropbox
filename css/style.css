@@ -38,6 +38,8 @@ html{
     --blue: #0d2481;
     --yellow: #ffd830;
     --white: #fff;
+    --beige: #f3efe7;
+    --darkbeige: #e8e2d7;
 }
 .widht100{
     max-width: var(--page-max-widht);
@@ -55,7 +57,6 @@ html{
     flex-direction: row;    
 }
 .h-screen {
-    /* min-height: calc(100vh - 45px); */
     background-color: var(--bg-color);
 }
 .widht30{
@@ -107,8 +108,13 @@ html{
 /* Barra di Navigazione widht 100% */
 
 .navContainer{
+    background-color: var(--white);
     height: 45px;    
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 101;    
+    box-shadow: 2px 2px 5px rgba(30, 30, 30, 0.5);
 }
 .menuSx{
     margin-right: auto;
@@ -121,18 +127,16 @@ html{
     padding: 0 15px;    
     list-style: none;
 }
-.navContainer a{
+#menu li a{
     text-decoration: none;
     color: var(--text-color);
     font-size: 15px;
 }
-
 #logo{
     height: 20px;
     padding-right: 10px;
     margin-left: 20px;
 }
-
 
 /* HERO SECTION */
 
@@ -175,20 +179,17 @@ h1{
 }
 
 .smallContainer h2 {
-margin-bottom: 60px;
-font-size: 42px;
+    margin-bottom: 60px;
+    font-size: 42px;
 }
-
 .divRadio {
     height: 50px;
     padding-right: 30px;
 }
-
 .divRadio p {
     line-height: 22px;
     font-size: 15px;
 }
-
 .radioContainer {
     display: block;
     position: relative;
@@ -197,13 +198,11 @@ font-size: 42px;
     cursor: pointer;
     font-size: 22px;
 }
-
 .radioContainer input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-
 .checkmark {
     position: absolute;
     border: 2px solid var(--grey);
@@ -214,26 +213,21 @@ font-size: 42px;
     background-color: var(--white);
     border-radius: 50%;
 }
-
 .radioContainer:hover input~.checkmark {
     background-color: var(--lightgrey);
 }
-
 .radioContainer input:checked~.checkmark {
     background-color: var(--btn-color);
     
 }
-
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-
 .radioContainer input:checked~.checkmark:after {
     display: block;
 }
-
 .radioContainer .checkmark:after {
     top: 4px;
     left: 4px;
@@ -351,16 +345,13 @@ font-size: 42px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 .businessCard{
     width: calc((100% - 15px) / 3);
     display: flex;
     flex-direction: column;
     padding: 0 15px;
-    margin-bottom: 60px;
-    
-
+    margin-bottom: 60px;  
 }
 .businessCard h3{
     padding-top: 8px;
@@ -393,7 +384,6 @@ font-size: 42px;
     display: grid;
     grid-template-columns: repeat(2, 300px) auto repeat(2, 300px);
     grid-template-rows: repeat(2, 300px);
-
 }
 .parent div{
     position: relative;
@@ -440,31 +430,14 @@ font-size: 42px;
     outline: 10px solid var(--lightgreen);
     outline-offset: -10px;   
 }
-#asu{
-    background-color: var(--brownred);
-    
-}
-#bicycle{
-    background-color: var(--red);
-}
-#hearst{
-    background-color: var(--lightazure);
-}
-#florida{
-    background-color: var(--azure);
-}
-#topps{
-    background-color: var(--lightred);
-}
-#planet{
-    background-color: var(--blue);
-}
-#channel{
-    background-color: var(--yellow);
-}
-#wipro{
-    background-color: var(--lightgrey);
-}
+#asu{background-color: var(--brownred);}
+#bicycle{background-color: var(--red);}
+#hearst{background-color: var(--lightazure);}
+#florida{background-color: var(--azure);}
+#topps{background-color: var(--lightred);}
+#planet{background-color: var(--blue);}
+#channel{background-color: var(--yellow);}
+#wipro{background-color: var(--lightgrey);}
 
 /* DOMANDE FREQUENTI */
 .faqContainer{
@@ -519,4 +492,110 @@ input[type="checkbox"] {
 }
 .faqContainer input[type="checkbox"]:checked ~ h4 ~ p {
     max-height: 80px;
+}
+
+/* FOOTER SECTION */
+footer{
+    width: 100%;
+    background-color: var(--footer-color);
+    min-height: 200px;
+    padding-bottom: 70px;
+}
+.footerContainer{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.footerContainer a{
+    color: var(--white);
+    text-decoration: none;
+}
+.footerContainer .title{
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.footerContainer li{
+    padding: 8px 0;
+    color: var(--white);
+    list-style: none;
+}
+.lang hr{
+    width: 120px;
+}
+.lang p{
+    color: var(--grey);
+    padding-top: 30px;
+    font-size: 16px;
+
+}
+.lang i{
+    color: var(--grey);    
+    padding: 10px 10px;
+
+}
+.lang{
+    padding-top: 30px;
+}
+
+
+
+/* BONUS SECTION */
+/** dropdown menù **/
+ul#menu li{
+    margin:0;
+    padding:0;
+    display: block;
+    position: relative;
+}
+ul#menu li a{   
+    font-size: 15px;
+    float: left;
+    padding:12px 30px;
+    color: var(--text-color);
+    text-decoration:none;
+
+}
+ul#menu li:hover{
+    background: var(--grey);
+    color: var(--text-color);
+}
+ul#menu li a:hover{
+    background: var(--darkbeige);
+    color: var(--text-color);
+}
+ul#menu ul{
+    margin:2px 0 0;
+    padding:0;
+    display:inline-block;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 172px;
+    top: 38px;
+    left: 0;
+    z-index:9999;
+    background: var(--beige);
+}
+ul#menu li:hover ul{
+    background: var(--darkbeige);
+    opacity: 1;
+    visibility: visible;
+}
+ul#menu ul li{
+    display: block;
+    border: 0;
+}
+ul#menu ul a{
+    padding:10px;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-transform: none;
+}
+ul#menu ul a:hover{
+    background-color: var(--beige);
+    color: var(--text-color);
 }
