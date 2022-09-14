@@ -623,7 +623,7 @@ ul#menu ul a:hover{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--white);
+    background-color: var(--grey);
     transform-origin: center;
     transition: transform 0.25s ease-out;
  }    
